@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://u45kty2qfnt0"]
+
+[ext_resource type="FontFile" uid="uid://pep4n6rat6uq" path="res://Augusta.ttf" id="1_feokc"]
+[ext_resource type="Texture2D" uid="uid://jqdgoy6oio8l" path="res://grunge-vintage-old-paper-background.jpg" id="2_lcwh6"]
+[ext_resource type="Script" path="res://EventPanel.gd" id="3_bwqoa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cthrq"]
+texture = ExtResource("2_lcwh6")
+
+[sub_resource type="Theme" id="Theme_we67g"]
+default_font = ExtResource("1_feokc")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_feokc")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 32
+Panel/styles/panel = SubResource("StyleBoxTexture_cthrq")
+
+[node name="EventPanel" type="Panel"]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -250.0
+offset_right = 384.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource("Theme_we67g")
+script = ExtResource("3_bwqoa")
+
+[node name="VFlowContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(768, 500)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 500.0
+alignment = 1
+
+[node name="EventText" type="Label" parent="VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
